@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.55; }
 a { color: inherit; }
-a:focus-visible { outline: 3px solid #bc5d27; outline-offset: 4px; border-radius: 3px; }
+a:focus-visible { outline: 3px solid #a64f22; outline-offset: 4px; border-radius: 3px; }
 .skip-link { position: absolute; z-index: 10; top: 8px; left: 8px; padding: 10px 14px; transform: translateY(-160%); background: var(--white); color: var(--ink); }
 .skip-link:focus { transform: translateY(0); }
 .site-header { border-bottom: 1px solid rgb(32 44 37 / 8%); }
