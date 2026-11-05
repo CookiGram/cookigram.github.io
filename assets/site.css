@@ -26,7 +26,7 @@ a:focus-visible { outline: 3px solid #a64f22; outline-offset: 4px; border-radius
 .header-inner, .site-footer { width: min(1160px, calc(100% - 64px)); margin: auto; }
 .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 1.12rem; font-weight: 750; letter-spacing: -.035em; }
-.wordmark-mark { width: 30px; height: 30px; border-radius: 50% 50% 45% 50%; display: grid; place-items: center; color: var(--white); background: var(--green); font-family: Georgia, serif; font-size: 1.25rem; font-weight: 700; font-style: italic; }
+.brand-icon { display: block; width: 32px; height: 32px; border-radius: 7px; }
 nav { display: flex; align-items: center; gap: 34px; }
 .site-header nav a, .site-footer nav a { text-decoration: none; font-size: .91rem; font-weight: 620; }
 .site-header nav a:hover, .site-footer nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -74,9 +74,8 @@ h2 { margin-bottom: 12px; font-family: Georgia, "Times New Roman", serif; font-s
 .button:hover { background: #3e614b; }.button-dark { color: white; background: var(--green-dark); }
 .independence { width: min(850px, 100%); margin: 27px auto 0; color: #62695f; text-align: center; font-size: .84rem; }.independence span { color: #ad703d; margin-right: 5px; }
 .project-section { width: min(930px, calc(100% - 64px)); margin: auto; padding: 91px 0 97px; display: grid; grid-template-columns: 190px 1fr; gap: 45px; align-items: center; }
-.project-mark { position: relative; width: 150px; height: 150px; display: grid; place-items: center; border-radius: 50%; background: #e9eadf; }
-.project-mark span { position: relative; z-index: 2; color: var(--green); font-family: Georgia, serif; font-size: 5.4rem; font-style: italic; font-weight: bold; }
-.project-mark i { position: absolute; left: 72px; top: 20px; width: 7px; height: 18px; border-radius: 100%; background: #d98b4f; transform: rotate(20deg); }.project-mark i:nth-of-type(2) { left: 47px; top: 27px; transform: rotate(-40deg); background: #70885d; }.project-mark i:nth-of-type(3) { left: 94px; top: 36px; transform: rotate(55deg); background: #829b6e; }
+.project-mark { width: 150px; height: 150px; display: grid; place-items: center; border-radius: 50%; background: #e9eadf; }
+.project-mark img { display: block; width: 110px; height: 110px; border-radius: 25px; }
 .project-copy { max-width: 620px; }.project-copy .eyebrow { margin-bottom: 10px; }.project-copy h2 { max-width: 550px; }.project-copy p:not(.eyebrow) { color: #566057; }.project-copy strong { color: var(--ink); }
 .site-footer { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); }
 .site-footer > p { margin: 0; color: var(--muted); font-size: .82rem; }.site-footer nav { gap: 21px; }.site-footer nav a { font-size: .81rem; }.footer-note { color: var(--muted); font-family: Georgia, serif; font-size: .83rem; }
@@ -86,12 +85,12 @@ h2 { margin-bottom: 12px; font-family: Georgia, "Times New Roman", serif; font-s
   .hero-art { min-height: 290px; }
   .art-plate { width: 77%; }
   .project-section { grid-template-columns: 135px 1fr; gap: 30px; }
-  .project-mark { width: 125px; height: 125px; }.project-mark span { font-size: 4.5rem; }
+  .project-mark { width: 125px; height: 125px; }.project-mark img { width: 92px; height: 92px; }
   .site-footer { flex-wrap: wrap; padding: 25px 0; }.site-footer > p { display: none; }
 }
 @media (max-width: 560px) {
   .header-inner, .site-footer { width: min(100% - 40px, 460px); }
-  .header-inner { min-height: 70px; gap: 10px; }.wordmark { gap: 7px; font-size: 1rem; }.wordmark-mark { width: 27px; height: 27px; }
+  .header-inner { min-height: 70px; gap: 10px; }.wordmark { gap: 7px; font-size: 1rem; }.brand-icon { width: 27px; height: 27px; }
   .site-header nav { gap: 14px; }.site-header nav a { font-size: .78rem; }.nav-github { display: none; }
   .hero { width: min(100% - 40px, 460px); display: flex; flex-direction: column; align-items: stretch; gap: 24px; padding: 55px 0 59px; }
   h1 { font-size: clamp(3rem, 13vw, 4.05rem); }.hero-lede { font-size: 1rem; }.hero-art { min-height: 245px; width: min(100%, 390px); align-self: center; }
@@ -99,7 +98,7 @@ h2 { margin-bottom: 12px; font-family: Georgia, "Times New Roman", serif; font-s
   .apps-section { padding: 68px 20px 60px; }.section-heading { text-align: left; margin-bottom: 27px; }.section-heading > p:last-child { margin: 0; }
   .app-grid { grid-template-columns: 1fr; gap: 14px; }.app-card { min-height: 0; padding: 22px; }.card-topline { margin-bottom: 22px; }.app-card > p:not(.app-kicker) { min-height: 0; }
   .independence { text-align: left; line-height: 1.6; }
-  .project-section { width: min(100% - 40px, 460px); grid-template-columns: 1fr; gap: 25px; padding: 66px 0 70px; }.project-mark { width: 90px; height: 90px; }.project-mark span { font-size: 3.5rem; }.project-mark i { left: 43px; top: 11px; }.project-mark i:nth-of-type(2) { left: 28px; top: 19px; }.project-mark i:nth-of-type(3) { left: 58px; top: 22px; }
+  .project-section { width: min(100% - 40px, 460px); grid-template-columns: 1fr; gap: 25px; padding: 66px 0 70px; }.project-mark { width: 90px; height: 90px; }.project-mark img { width: 66px; height: 66px; }
   .site-footer { display: grid; grid-template-columns: 1fr auto; row-gap: 18px; }.site-footer nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: 12px; }.footer-note { justify-self: end; }.site-footer nav a { font-size: .78rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

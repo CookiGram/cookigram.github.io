@@ -6,7 +6,7 @@ Site public statique de présentation de l’écosystème CookiGram.
 
 - HTML sémantique et CSS natif, sans build, script, dépendance distante, suivi ou cookie.
 - Liens canoniques vers [CookiGram](https://cookigram.github.io/cookigram/) et [CookiList](https://cookigram.github.io/shopping-list/).
-- Les illustrations et le favicon de ce site sont des formes vectorielles originales créées pour cette page. Aucun asset tiers n’est embarqué.
+- L’illustration du plat est dessinée en CSS pour cette page. Le favicon et les petits repères de marque reprennent l’icône canonique `static/icons/icon.svg` du dépôt public CookiGram, déclaré dans `site-config.yaml`; cet actif est couvert par sa licence MIT, reproduite ici avec la mention de copyright.
 
 ## Vérification locale
 
