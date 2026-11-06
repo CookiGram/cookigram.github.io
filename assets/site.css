@@ -36,7 +36,7 @@ nav { display: flex; align-items: center; gap: 34px; }
 .eyebrow { margin: 0 0 18px; color: var(--green); text-transform: uppercase; letter-spacing: .13em; font-size: .72rem; line-height: 1.4; font-weight: 760; }
 .eyebrow-dot { width: 8px; height: 8px; display: inline-block; margin-right: 7px; background: var(--orange); border-radius: 50%; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { margin-bottom: 20px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.3rem, 5.4vw, 5.15rem); letter-spacing: -.065em; line-height: .99; font-weight: 500; }
+h1 { margin-bottom: 20px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.3rem, 5.4vw, 5.15rem); letter-spacing: -.065em; line-height: .99; font-weight: 500; overflow-wrap: anywhere; }
 h1 span { display: block; margin-top: 9px; color: var(--green); }
 .hero-lede { max-width: 470px; margin-bottom: 26px; color: #505b52; font-size: 1.08rem; line-height: 1.7; }
 .hero-actions { display: none; }
@@ -93,12 +93,12 @@ h2 { margin-bottom: 12px; font-family: Georgia, "Times New Roman", serif; font-s
 }
 @media (max-width: 560px) {
   .header-inner, .site-footer { width: min(100% - 40px, 460px); }
-  .header-inner { min-height: 64px; gap: 4px; }.wordmark { gap: 7px; font-size: 1rem; }.brand-icon { width: 27px; height: 27px; }
-  .site-header nav { gap: 4px; }.site-header nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; font-size: .78rem; }.site-header nav .nav-github { display: none; }
+  .header-inner { min-height: 64px; gap: 4px; flex-wrap: wrap; }.wordmark { gap: 7px; font-size: 1rem; }.brand-icon { width: 27px; height: 27px; }
+  .site-header nav { max-width: 100%; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }.site-header nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; font-size: .78rem; }.site-header nav .nav-github { display: none; }
   .hero { width: min(100% - 40px, 460px); display: flex; flex-direction: column; align-items: stretch; gap: 20px; padding: 30px 0 40px; }
   .hero-copy { max-width: none; }
-  h1 { font-size: clamp(3rem, 13vw, 4.05rem); }.hero-lede { margin-bottom: 18px; font-size: 1rem; }.hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0; }
-  .hero-actions .button { min-width: 0; min-height: 48px; padding: 0 9px; gap: 6px; font-size: .81rem; white-space: nowrap; }
+  h1 { font-size: clamp(3rem, 13vw, 4.05rem); }.hero-lede { margin-bottom: 18px; font-size: 1rem; }.hero-actions { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 0; }
+  .hero-actions .button { min-width: 0; min-height: 48px; padding: 0 9px; gap: 6px; font-size: .81rem; }
   .hero-copy > .text-link { display: none; }
   .app-card .button { display: none; }
   .hero-art { min-height: 245px; width: min(100%, 390px); align-self: center; }
@@ -107,9 +107,6 @@ h2 { margin-bottom: 12px; font-family: Georgia, "Times New Roman", serif; font-s
   .app-grid { grid-template-columns: 1fr; gap: 14px; }.app-card { min-height: 0; padding: 22px; }.card-topline { margin-bottom: 22px; }.app-card > p:not(.app-kicker) { min-height: 0; }
   .independence { text-align: left; line-height: 1.6; }
   .project-section { width: min(100% - 40px, 460px); grid-template-columns: 1fr; gap: 25px; padding: 66px 0 70px; }.project-mark { width: 90px; height: 90px; }.project-mark img { width: 66px; height: 66px; }
-  .site-footer { display: grid; grid-template-columns: 1fr auto; row-gap: 18px; }.site-footer nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: 12px; }.footer-note { justify-self: end; }.site-footer nav a { font-size: .78rem; }
-}
-@media (max-width: 340px) {
-  .hero-actions { grid-template-columns: 1fr; gap: 8px; }
+  .site-footer { display: grid; grid-template-columns: 1fr auto; row-gap: 18px; }.site-footer nav { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; justify-content: space-between; gap: 12px; }.footer-note { justify-self: end; }.site-footer nav a { font-size: .78rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
